@@ -91,7 +91,7 @@ Il est recommandé de changer le mot de passe à la première connexion.
 
 Prometheus (optionnel)
 ```bash
-kubectl -n monitoring port-forward svc/monitoring-stack-prometheus 9090:9090
+kubectl -n monitoring port-forward svc/monitoring-stack-kube-prom-prometheus 9090:9090
 ```
 
 Ouvrir : http://localhost:9090
