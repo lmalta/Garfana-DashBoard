@@ -1,0 +1,24 @@
+grafana:
+  adminUser: admin
+  adminPassword: changeme
+  service:
+    type: ClusterIP
+    port: 80
+  ingress:
+    enabled: false
+
+prometheus:
+  prometheusSpec:
+    serviceMonitorSelectorNilUsesHelmValues: false
+    evaluationInterval: "30s"
+    scrapeInterval: "30s"
+
+alertmanager:
+  alertmanagerSpec:
+    replicas: 1
+
+kubeStateMetrics:
+  enabled: true
+
+nodeExporter:
+  enabled: true
